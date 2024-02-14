@@ -9,14 +9,16 @@ export const Banner = styled.div`
   background-image: url(${banner});
   background-size: cover;
   padding: 9.4rem 16rem 10.8rem;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   justify-content: space-between;
+
+  img {
+    margin: auto;
+  }
 `
 
 export const Info = styled.div`
-  display: flex;
-  flex-direction: column;
-
   > div {
     width: 58.8rem;
 
@@ -30,6 +32,7 @@ export const Info = styled.div`
     }
 
     p {
+      width: 88%;
       font-size: 2rem;
       color: ${({ theme }) => theme['base-subtitle']};
       line-height: 130%;
@@ -40,10 +43,9 @@ export const Info = styled.div`
     width: 56.7rem;
     height: 8.4rem;
     margin-top: 6.6rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 2rem 4rem;
 
     li {
       display: inline-flex;
@@ -60,9 +62,6 @@ export const Info = styled.div`
       }
     }
 
-    li:last-child {
-      padding-right: 11px;
-    }
     .cart {
       background-color: ${({ theme }) => theme['yellow-dark']};
     }
