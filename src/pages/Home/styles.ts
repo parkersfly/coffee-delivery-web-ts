@@ -2,7 +2,18 @@ import styled from 'styled-components'
 
 import banner from '../../assets/banner.png'
 
-export const HomeContainer = styled.div``
+export const HomeContainer = styled.div`
+  > section {
+    padding: 3.2rem 16rem 0;
+
+    h3 {
+      font-size: 3.2rem;
+      font-family: 'Baloo 2';
+      color: ${({ theme }) => theme['base-subtitle']};
+      margin-bottom: 5.4rem;
+    }
+  }
+`
 
 export const Banner = styled.div`
   height: 54.4rem;

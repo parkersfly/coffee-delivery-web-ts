@@ -2,6 +2,7 @@ import { Coffee, Package, ShoppingCart, Timer } from '@phosphor-icons/react'
 import { Banner, HomeContainer, Info } from './styles'
 
 import coffeeBrand from '../../assets/coffee-brand.png'
+import { Card } from './components/Card'
 
 export function Home() {
   return (
@@ -37,6 +38,10 @@ export function Home() {
         </Info>
         <img src={coffeeBrand} alt="" />
       </Banner>
+      <section>
+        <h3>Nossos cafés</h3>
+        <Card />
+      </section>
     </HomeContainer>
   )
 }
