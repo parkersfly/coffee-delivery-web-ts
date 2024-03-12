@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const CardContainer = styled.div`
   width: 25.6rem;
+  max-width: 37rem;
   height: 31rem;
   background-color: ${({ theme }) => theme['base-card']};
   border-radius: 6px 36px;
@@ -19,16 +20,23 @@ export const CardContainer = styled.div`
   main {
     text-align: center;
 
+    > div {
+      display: flex;
+      margin: 1.2rem auto 1.6rem auto;
+      justify-content: center;
+    }
+
     span {
       display: block;
       max-width: max-content;
+      text-transform: uppercase;
       font-size: 1rem;
       font-weight: bold;
       padding: 4px 8px;
-      margin: 1.2rem auto 1.6rem auto;
       border-radius: 999px;
       background-color: ${({ theme }) => theme['yellow-light']};
       color: ${({ theme }) => theme['yellow-dark']};
+      margin-right: 4px;
     }
 
     p:nth-child(2) {
