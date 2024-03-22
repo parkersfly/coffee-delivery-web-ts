@@ -1,8 +1,10 @@
 import styled from 'styled-components'
 
 export const HeaderContent = styled.header`
+  max-width: 112rem;
+  margin: auto;
   height: 10.4rem;
-  padding: 3.2rem 16rem;
+  padding: 3.2rem 0;
 
   display: flex;
   justify-content: space-between;
