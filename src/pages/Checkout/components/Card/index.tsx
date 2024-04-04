@@ -1,27 +1,31 @@
 import { Minus, Plus, Trash } from '@phosphor-icons/react'
-import { CardContainer } from './styles'
+import { CardContainer, OptionsGroup } from './styles'
+
+import coffeeExample from '../../../../assets/coffees/tradicional.png'
 
 export function Card() {
   return (
     <CardContainer>
-      <img src="" alt="" />
+      <img src={coffeeExample} alt="" />
       <div>
         <span>Expresso Tradicional</span>
 
-        <div>
-          <button>
-            <Minus />
-          </button>
-          <span>1</span>
-          <button>
-            <Plus />
-          </button>
-        </div>
+        <OptionsGroup>
+          <div>
+            <button>
+              <Minus />
+            </button>
+            <span>1</span>
+            <button>
+              <Plus />
+            </button>
+          </div>
 
-        <button>
-          <Trash />
-          Remover
-        </button>
+          <button>
+            <Trash size={16} />
+            REMOVER
+          </button>
+        </OptionsGroup>
       </div>
 
       <span>R$ 9,90</span>

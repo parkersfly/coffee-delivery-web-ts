@@ -22,11 +22,18 @@ export const GlobalStyle = createGlobalStyle`
   body {
     background: ${({ theme }) => theme.background};
     color: ${({ theme }) => theme['base-text']};
+    overflow-y: hidden;
   }
 
   body, input, textarea, button {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 1.6rem;
+  }
+
+  button {
+    cursor: pointer;
+    border: none;
+    background: transparent;
   }
 `

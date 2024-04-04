@@ -1,6 +1,8 @@
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 export const HeaderContent = styled.header`
+  width: 100%;
   max-width: 112rem;
   margin: auto;
   height: 10.4rem;
@@ -9,6 +11,7 @@ export const HeaderContent = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  grid-area: header;
 
   > nav {
     display: flex;
@@ -34,7 +37,7 @@ export const Location = styled.div`
   }
 `
 
-export const Cart = styled.button`
+export const Cart = styled(Link)`
   padding: 8px;
   border: none;
   border-radius: 8px;

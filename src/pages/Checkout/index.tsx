@@ -17,9 +17,15 @@ import {
 
 import { useForm } from 'react-hook-form'
 import { Card } from './components/Card'
+import { useNavigate } from 'react-router-dom'
 
 export function Checkout() {
   const { register } = useForm()
+  const navigate = useNavigate()
+
+  function VerifyAddressAndPayment() {
+    navigate('/success')
+  }
 
   return (
     <CheckoutContainer>
@@ -100,22 +106,24 @@ export function Checkout() {
           <Card />
           <Card />
 
-          <div>
-            <p>Total de itens</p>
-            <span>R$ 29,70</span>
+          <div className="sum">
+            <div className="text">
+              <p>Total de itens</p>
+              <span>R$ 29,70</span>
+            </div>
+
+            <div className="text">
+              <p>Entrega</p>
+              <span>R$ 3,50</span>
+            </div>
+
+            <div className="text">
+              <strong>Total</strong>
+              <span>R$ 33,20</span>
+            </div>
           </div>
 
-          <div>
-            <p>Entrega</p>
-            <span>R$ 3,50</span>
-          </div>
-
-          <div>
-            <strong>Total</strong>
-            <span>R$ 33,20</span>
-          </div>
-
-          <button>Confirmar pedido</button>
+          <button onClick={VerifyAddressAndPayment}>Confirmar pedido</button>
         </CoffesSelected>
       </Cart>
     </CheckoutContainer>

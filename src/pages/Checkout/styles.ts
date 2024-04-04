@@ -1,10 +1,14 @@
 import styled from 'styled-components'
 
 export const CheckoutContainer = styled.div`
+  width: 100%;
   max-width: 112rem;
   margin: 4rem auto 0;
-
-  display: flex;
+  display: grid;
+  grid-template-areas:
+    'address total'
+    'payment total';
+  gap: 3.2rem;
 
   h3 {
     font-size: 1.8rem;
@@ -32,9 +36,9 @@ export const CheckoutContainer = styled.div`
 export const OrderInfo = styled.div``
 
 export const OrderAdressInfo = styled.section`
-  max-width: 64rem;
   margin-bottom: 12px;
-  margin-right: 32px;
+
+  grid-area: address;
 
   div:first-child {
     display: flex;
@@ -63,6 +67,11 @@ export const FormContainer = styled.form`
   width: 100%;
   margin-top: 3.2rem;
 
+  input {
+    font-size: 1.4rem;
+    color: ${({ theme }) => theme['base-text']};
+  }
+
   > div:last-child {
     display: flex;
     width: 100%;
@@ -82,7 +91,7 @@ export const FormContainer = styled.form`
   }
 
   > .inputComplement {
-    width: 34.8rem;
+    flex: 1;
     padding: 0;
     display: flex;
     justify-content: space-between;
@@ -116,8 +125,6 @@ export const FormContainer = styled.form`
 `
 
 export const Payment = styled.section`
-  max-width: 64rem;
-
   > div:first-child {
     display: flex;
     gap: 8px;
@@ -147,11 +154,6 @@ export const Payment = styled.section`
         background: ${({ theme }) => theme['base-hover']};
       }
 
-      &:active {
-        background: ${({ theme }) => theme['purple-light']};
-        border: 1px solid ${({ theme }) => theme.purple};
-      }
-
       svg {
         font-size: 16px;
         color: ${({ theme }) => theme.purple};
@@ -160,6 +162,53 @@ export const Payment = styled.section`
   }
 `
 
-export const CoffesSelected = styled.section``
+export const CoffesSelected = styled.section`
+  grid-area: total;
+
+  border-radius: 6px 44px !important;
+
+  > div:first-child {
+    padding-bottom: 2.4rem;
+  }
+
+  > div + div {
+    padding: 2.4rem 0;
+  }
+
+  .sum {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .text {
+    display: flex;
+    font-size: 1.4rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .text:last-child {
+    font-size: 2rem;
+    font-weight: 700;
+    color: ${({ theme }) => theme['base-subtitle']};
+  }
+
+  > button:last-child {
+    width: 100%;
+    height: 4.6rem;
+    padding: 1.2rem;
+    border-radius: 6px;
+    background-color: ${({ theme }) => theme.yellow};
+    color: ${({ theme }) => theme.white};
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: ${({ theme }) => theme['yellow-dark']};
+    }
+  }
+`
 
 export const Cart = styled.div``

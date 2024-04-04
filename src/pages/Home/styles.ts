@@ -3,6 +3,10 @@ import styled from 'styled-components'
 import banner from '../../assets/banner.png'
 
 export const HomeContainer = styled.div`
+  grid-area: content;
+  height: 100vh;
+  overflow-y: auto;
+
   > section {
     max-width: 112rem;
     padding: 3.2rem 0 15.7rem;
