@@ -12,7 +12,9 @@ export function Success() {
 
         <Card>
           <div className="info">
-            <MapPin />
+            <div className="mapPin icon">
+              <MapPin weight="fill" />
+            </div>
             <div>
               <p>
                 Entrega em <strong>Rua João Daniel Martinelli, 102</strong>
@@ -22,7 +24,9 @@ export function Success() {
           </div>
 
           <div className="info">
-            <Timer />
+            <div className="timer icon">
+              <Timer weight="fill" />
+            </div>
             <div>
               <p>Previsão de entrega</p>
               <strong>20 min - 30 min </strong>
@@ -30,7 +34,9 @@ export function Success() {
           </div>
 
           <div className="info">
-            <CurrencyDollar />
+            <div className="currencyDollar icon">
+              <CurrencyDollar />
+            </div>
             <div>
               <p>Pagamento na entrega</p>
               <strong>Cartão de Crédito</strong>
